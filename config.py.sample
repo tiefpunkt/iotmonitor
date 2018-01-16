@@ -1,0 +1,8 @@
+import os
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+devices_file = dir_path + '/devices.csv'
+offline_file = dir_path + '/offline.csv'
+
+# Create a Service at http://docs.pushjet.io/docs/creating-a-new-service
+pushjet_key = "xxxxxxxxxx"
