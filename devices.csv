@@ -7,3 +7,7 @@ Spixstr 25,AirRohr,355
 MuMaLab Outdoor,AirRohr,3655
 ttn-kq-gw01,ThingsNetworkGateway,eui-b827ebfffeca0023
 MuMaLab SenseBox,OpenSenseMap,56cb84812cb6e1e41061bc99
+alpha,PingCheck,alpha.tiefpunkt.com
+beta,PingCheck,beta.tiefpunkt.com
+vps02,PingCheck,vps02.thearrow.de
+giesing,PingCheck,giesing.munichmakes.de

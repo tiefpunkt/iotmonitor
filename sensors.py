@@ -3,6 +3,7 @@ import json
 from datetime import datetime, timedelta
 from dateutil import parser
 from dateutil.tz import tzutc
+import os
 
 
 class Device(object):
@@ -86,3 +87,13 @@ class OpenSenseMap(JSONDevice):
         delta = now - last_ping
 
         return delta.days == 0 and delta.seconds < 600
+
+
+class PingCheck(Device):
+    def __init__(self, name, hostname):
+        super().__init__(name)
+        self._hostname = hostname
+
+    def getState(self):
+        response = os.system("ping -c 1 %s > /dev/null 2>&1" % self._hostname)
+        return response == 0
